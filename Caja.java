@@ -37,7 +37,8 @@ class Caja {
 					System.out.print("Precio: ");
 					p = teclado.nextFloat();
 					storage.buyProduct(opcionDetalle, q, p);
-					break;
+				break;
+
 				case 2:
 					message.showProducts(storage);
 					opcionDetalle = teclado.nextInt();
@@ -48,18 +49,27 @@ class Caja {
 					System.out.print("Cantidad: ");
 					q = teclado.nextInt();
 					storage.saleProduct(opcionDetalle, q);				
-					break;
+				break;
+
 				case 3:
-				 message.showReport(storage);
-				 System.out.print("Presione 0 para continuar...");
-				 opcion = teclado.nextInt();
-				 break;
+				 	message.showReport(storage);
+					System.out.print("Presione 0 para continuar...");
+				 	opcion = teclado.nextInt();
+				break;
+
 				case 4:
+					System.exit(1);
+				break;
+
+				default:
+					System.out.println("La opcion digitada no es valida!");
+
 
 
 
 
 			}
+			opcion = 0;
 
 		}
 
